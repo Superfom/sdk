@@ -23,7 +23,7 @@ namespace Microsoft.NET.ToolPack.Tests
 
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_should_fail_with_error_message()
         {
             TestAsset helloWorldAsset = CreateAsset();
