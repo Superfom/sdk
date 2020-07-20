@@ -26,9 +26,9 @@ namespace Microsoft.NET.Publish.Tests
         }
 
         [Theory]
-        [InlineData(null, "netcoreapp2.1")]
-        [InlineData("true", "netcoreapp2.1")]
-        [InlineData("false", "netcoreapp2.1")]
+        //[InlineData(null, "netcoreapp2.1")] - https://github.com/dotnet/sdk/issues/12558
+        //[InlineData("true", "netcoreapp2.1")] - https://github.com/dotnet/sdk/issues/12558
+        //[InlineData("false", "netcoreapp2.1")] - https://github.com/dotnet/sdk/issues/12558
         [InlineData(null, "netcoreapp2.2")]
         [InlineData("true", "netcoreapp2.2")]
         [InlineData("false", "netcoreapp2.2")]

@@ -36,7 +36,7 @@ namespace Microsoft.NET.ToolPack.Tests
         }
 
         // Reproduce of https://github.com/dotnet/cli/issues/10607
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_should_not_fail_on_build()
         {
             TestAsset helloWorldAsset = CreateAsset();

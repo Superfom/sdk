@@ -28,7 +28,7 @@ namespace Microsoft.NET.ToolPack.Tests
         // lower than netcoreapp2.0
         [InlineData("TargetFramework", "netcoreapp2.0", "DotnetToolDoesNotSupportTFMLowerThanNetcoreapp21")]
         [InlineData("TargetFramework", "netcoreapp1.1", "DotnetToolDoesNotSupportTFMLowerThanNetcoreapp21")]
-        [InlineData("TargetFrameworks", "netcoreapp2.0;netcoreapp2.1", "DotnetToolDoesNotSupportTFMLowerThanNetcoreapp21")]
+        //[InlineData("TargetFrameworks", "netcoreapp2.0;netcoreapp2.1", "DotnetToolDoesNotSupportTFMLowerThanNetcoreapp21")] - https://github.com/dotnet/sdk/issues/12558
         // non netcoreapp
         [InlineData("TargetFramework", "netstandard2.0", "DotnetToolOnlySupportNetcoreapp")]
         public void It_should_fail_with_error_message(string targetFrameworkProperty,

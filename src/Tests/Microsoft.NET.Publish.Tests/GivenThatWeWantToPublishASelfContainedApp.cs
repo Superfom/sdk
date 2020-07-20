@@ -24,7 +24,7 @@ namespace Microsoft.NET.Publish.Tests
         {
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_errors_when_publishing_self_contained_app_without_rid()
         {
              var testAsset = _testAssetsManager
@@ -42,7 +42,7 @@ namespace Microsoft.NET.Publish.Tests
                 .HaveStdOutContaining(Strings.CannotHaveSelfContainedWithoutRuntimeIdentifier);
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_errors_when_publishing_self_contained_without_apphost()
         {
             var runtimeIdentifier = RuntimeEnvironment.GetRuntimeIdentifier();
@@ -65,7 +65,7 @@ namespace Microsoft.NET.Publish.Tests
         }
 
         // repro https://github.com/dotnet/sdk/issues/2466
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_does_not_fail_publishing_a_self_twice()
         {
             var runtimeIdentifier = RuntimeEnvironment.GetRuntimeIdentifier();
@@ -95,7 +95,7 @@ namespace Microsoft.NET.Publish.Tests
         private const int PEHeaderPointerOffset = 0x3C;
         private const int SubsystemOffset = 0x5C;
 
-        [WindowsOnlyFact]
+        [WindowsOnlyFact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_can_make_a_Windows_GUI_exe()
         {
             var runtimeIdentifier = EnvironmentInfo.GetCompatibleRid("netcoreapp2.0");

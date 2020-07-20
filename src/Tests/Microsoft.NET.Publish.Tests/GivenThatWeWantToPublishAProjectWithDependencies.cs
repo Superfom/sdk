@@ -157,7 +157,7 @@ namespace Microsoft.NET.Publish.Tests
             // See https://github.com/dotnet/cli/blob/358568b07f16749108dd33e7fea2f2c84ccf4563/test/dotnet-store.Tests/GivenDotnetStoresAndPublishesProjects.cs
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_publishes_projects_with_filter_and_rid()
         {
             string project = "SimpleDependencies";

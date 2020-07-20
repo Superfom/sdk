@@ -123,7 +123,7 @@ namespace Microsoft.NET.Publish.Tests
                 .HaveStdOutContaining("Hello World!");
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void Publish_self_contained_app_with_dot_in_the_name()
         {
             var targetFramework = "netcoreapp2.1";
@@ -425,7 +425,7 @@ public static class Program
             publishResult.Should().Fail();
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         public void It_allows_unsupported_rid_with_override()
         {
             var helloWorldAsset = _testAssetsManager

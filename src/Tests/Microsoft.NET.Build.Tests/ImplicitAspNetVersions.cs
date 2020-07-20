@@ -54,7 +54,7 @@ namespace Microsoft.NET.Build.Tests
             aspnetVersion.ToString().Should().Be("2.1.1");
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/dotnet/sdk/issues/12558")]
         [InlineData("Microsoft.AspNetCore.App")]
         [InlineData("Microsoft.AspNetCore.All")]
         public void AspNetCoreVersionRollsForward(string aspnetPackageName)

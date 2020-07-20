@@ -272,7 +272,7 @@ namespace Microsoft.NET.Build.Tests
         }
 
         [Theory]
-        [InlineData("netcoreapp2.1")]
+        //[InlineData("netcoreapp2.1")] - skip due to https://github.com/dotnet/sdk/issues/12558
         [InlineData("netcoreapp3.0")]
         public void It_runs_a_rid_specific_app_from_the_output_folder(string targetFramework)
         {
